@@ -53,4 +53,9 @@ pantry = [...pantry, ...purchase]
 console.log("Now my pantry has:")
 console.log(pantry)
 
+console.log("I don't like nutmeg anymore.  I'm going to throw it: ")
+
+var [first, ...rest] = pantry
+
+console.log(rest)
 </script>
