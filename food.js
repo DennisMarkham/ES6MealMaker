@@ -1,11 +1,8 @@
-OPEN THE CONSOLE AND PAGE SOURCE CODE 
+//this project manifests itself solely in the console log.
 
-<script type = "module">
-	//this project manifests itself solely in the console log.
+// import cake from "./desserts.js";
 
-import cake from "./desserts.js";
-
-console.log(cake);
+console.log("cake");
 
 var sandwich =
 {
@@ -31,7 +28,7 @@ sandwich = {...sandwich, sauce}
 console.log("Now my sandwich has sauce:")
 console.log(sandwich)
 
-console.log("I love roast beef so much, I'm going to eat it on its own:")
+console.log("I love cheese so much, I'm going to eat it on its own:")
 
 var {cheese} = sandwich;
 
@@ -62,4 +59,3 @@ console.log("I don't like nutmeg anymore.  I'm going to throw it: ")
 var [first, ...rest] = pantry
 
 console.log(rest)
-</script>
