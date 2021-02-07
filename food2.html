@@ -1,0 +1,34 @@
+<script>
+	console.log("Hello")
+
+	var sandwich =
+	{
+		bread: "rye",
+		sauce: "mustard",
+		vegetables: ["lettuce", "tomatoes"]
+	}
+
+	console.log(sandwich.vegetables)
+
+	console.log("Let's add more veggies to the sandwich");
+
+	var moarVeggies = ["olives", "cucumbers"];
+
+
+	sandwich.vegetables = [...sandwich.vegetables, ...moarVeggies]
+
+	console.log(sandwich);
+
+	console.log("Let's give this sandwich some cheese");
+
+	var cheese = "cheddar";
+
+	var sandwich = {...sandwich, cheese}
+
+		console.log(sandwich)
+
+	var {sauce} = sandwich; 
+
+	console.log("Mmmmm, " + sauce);
+</script>
+
