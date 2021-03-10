@@ -3,14 +3,14 @@ OPEN THE CONSOLE AND PAGE SOURCE CODE
 <script type = "module">
 	//this project manifests itself solely in the console log.
 
-import cake from "./desserts.js";
+// import cake from "./desserts.js";
 
-console.log(cake);
+// console.log(cake);
 
 var sandwich =
 {
-	bread: "white",
-	cheese: "American"
+	bread: "white bread",
+	cheese: "American cheese"
 }	
 
 console.log("This is my sandwich:")
@@ -31,11 +31,27 @@ sandwich = {...sandwich, sauce}
 console.log("Now my sandwich has sauce:")
 console.log(sandwich)
 
-console.log("I love roast beef so much, I'm going to eat it on its own:")
+console.log("The ingridients of this sandwich are:")
+
+var {cheese, bread, meat, sauce} = sandwich;
+
+var sandIng = [cheese, bread, meat, sauce];
+
+sandIng.forEach(ing => console.log(`- ${ing} `));
+
+
+console.log("The ingredients of my sandwich which end with 'e' are:");
+
+var eEndIng = sandIng.filter(ing => ing.endsWith('e'))
+
+console.log(eEndIng);
+
+console.log("I love cheese so much, I'm going to eat it on its own:")
 
 var {cheese} = sandwich;
 
-console.log("Yum!  I'm eating " + cheese + " cheese!")
+console.log("Yum!  I'm eating " + cheese)
+
 
 console.log("But does the sandwich still have roast beef?");
 
@@ -47,19 +63,20 @@ console.log("Does the sandwich have chicken?");
 
 var pantry = ["nutmeg", "crackers", "peanut butter"];
 console.log("In my pantry is:")
-console.log(pantry)
+pantry.forEach(food => console.log(`- ${food}`));
 
 var purchase = ["jelly", "pepper", "sugar"];
 console.log("I purchased:");
 console.log(purchase);
+purchase.forEach(food => console.log(`- ${food}`));
 
 pantry = [...pantry, ...purchase]
 console.log("Now my pantry has:")
-console.log(pantry)
+pantry.forEach(food => console.log(`- ${food}`));
 
-console.log("I don't like nutmeg anymore.  I'm going to throw it: ")
+console.log("I don't like nutmeg anymore.  I'm going to throw it away, now I have: ")
 
 var [first, ...rest] = pantry
 
-console.log(rest)
+rest.forEach(food => console.log(`- ${food}`))
 </script>
